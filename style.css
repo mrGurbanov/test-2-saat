@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+:root {
+    --primary-clr: #6c757d;
+    --p-clr: #212529;
+    --card-bg-clr: 248 249 250;
+    --nav-txt-clr: 255 255 255;
+}
+
+.grid {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.jcsb {
+    justify-content: space-between;
+}
+
+
+
+
+.container {
+    width: 90%;
+    padding-inline: 1.5rem;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+nav {
+    height: 56px;
+    padding-block: .5rem;
+    background-color: var(--p-clr);
+    
+
+    .container-head {
+        width: 85%;
+        margin: auto;
+        height: 100%;
+        padding-inline: .75rem;
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+
+            .left {
+                color: white;
+                font-size: 20px;
+            }
+
+            ul {
+                > li {
+                    > a {
+                        padding: .5rem;
+                        font-size: 1rem;
+                        color: rgb(255, 255, 255, 0.55);
+                        transition: color 200ms ease-in;
+                        
+                        
+                        &:is(.active, :hover) {
+                            color: white;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+    width: 100%;
+
+    .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+
+
+        .col1 {
+            flex-grow: 2;
+            padding-inline: 1.5rem;
+            .col1_content {
+                header {
+                    width: 736px;
+                    margin-bottom: 1.5rem;
+                    > h1 {
+                        font-size: 40px;
+                        font-style: bold;
+                        margin-bottom: 4px;
+                        text-align: left;
+                        
+                    }
+
+                    > p {
+                        color: var(--primary-clr);
+                        font-size: 1rem;
+                        margin-bottom: .5rem;
+                        font-style: italic;
+                    }
+
+                    > a {
+                        font-size: .75rem;
+                        background-color: var(--primary-clr);
+                        color: white;
+                        padding: 5px 8px;
+                        border-radius: 8px;
+                        font-weight: 700;
+                    }
+                }
+                
+                figure {
+                    margin-bottom: 1.5rem;
+                    img {
+                        width: 736px;
+                        border-radius: .5rem;
+                    }
+                }
+                section {
+                    width: 100%;
+                    p {
+                        font-size: 20px;
+                        margin-bottom: 1.5rem;
+                        color: var(--p-clr);
+                    }
+
+                    h2 {
+                        font-size: 2rem;
+                        color: var(--p-clr);
+                        margin: 3rem 0rem 1.5rem;
+                    }
+                }
+            }
+
+            > section {
+                width: 100%;
+                border: 1px solid black;
+                margin-bottom: 48px;
+                border-radius: .5rem;
+                overflow: hidden;
+
+                .card {
+                    background-color: rgb(var(--card-bg-clr));
+
+                    .card_body {
+                        padding: 1rem;
+
+                        form {
+                            margin-bottom: 1.5rem;
+                            textarea {
+                                width: 100%;
+                                min-height: 72px;
+                                padding: .375rem .75rem;
+                                border-radius: .5rem;
+                                background-color: inherit;
+                                font-size: 1rem;
+                                outline: none;
+                                resize: vertical;
+                            }
+                        }
+                        div {
+                            flex-shrink: 0;
+
+                            > .image-radius {
+                                border-radius: 50%;
+                                vertical-align: middle;
+                                overflow: clip
+                            }
+                        }
+                        
+                        .cn {
+                            display: flex;
+                            flex: 1 1 auto;
+                            flex-shrink: 0;
+                            margin-top: 24px;
+                            
+                            .img-cont {
+                                width: 50px;
+                                height: 290px;
+                            }
+                            .cn_info {
+                                width: 90%;
+                                font-size: 1rem;
+                                margin-left: 1rem;
+
+                            h5 {
+                                font-size: 1rem;
+                            }
+                        .threeinone {
+                            
+                           
+                            .three {
+                                
+                                }
+                            }
+                           }
+                        }
+                    }
+                }
+            }
+        }
+
+        .col2 {
+            flex-grow: 1;
+            padding-inline: 1.5rem;
+            max-width: 100%;
+
+            .card {
+                border: 1px solid var(--primary-clr);
+                border-radius: 8px;
+                overflow: hidden;
+                margin-bottom: 1.5rem;
+
+                .cart-header {
+                    padding: 8px 16px;
+                    font-size: 1rem;
+                    border-bottom: 1px solid var(--primary-clr);
+                    background-color: rgb(0 0 0 / 0.03);
+                }
+
+                .card-body {
+                        
+                    div {
+                        padding: 1rem;
+                        align-items: stretch;
+
+                        input {
+                            padding: 6px 12px;
+                            border-top-left-radius: 0;
+                            border-bottom-left-radius: 0;
+                            border-top-left-radius: .5rem;
+                            border-bottom-left-radius: .5rem;
+                            background-color: inherit;
+                            outline: none;
+                            border: 1px solid var(--primary-clr);
+                            width: 100%;
+                            font-size: 1rem;
+                        }
+                        button {
+                            padding: 6px 12px;
+                            background-color: #0d6efd;
+                            color: white;
+                            font-size: 1rem;
+                            border-top-left-radius: 0;
+                            border-bottom-left-radius: 0;
+                            border-top-right-radius: .5rem;
+                            border-bottom-right-radius: .5rem;
+                            border: none;
+                            cursor: pointer;
+                        }
+                    }
+                    
+                    .web {
+                        
+                        ul {
+                            padding-inline: 12px;
+                            flex-grow: 1;
+
+                            li {
+                                a {
+                                    text-decoration: underline;
+                                    color: rgb(6, 114, 191);
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    padding-block: 3rem;
+    background-color: var(--p-clr);
+
+    .container-foot {
+
+        p {
+           color: white; 
+        }
+    }
+}
